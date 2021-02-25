@@ -25,7 +25,8 @@ const API_URL = 'https://api.punkapi.com/v2/beers'
 // It is a function which takes a stream of actions and returns a stream of actions. 
 // Actions in, actions out.
 
-// The ofType operator offered by redux-observable is not the best way to discriminate union types. A much better way is to use the isOfType function provided by typesafe-actions. https://stackoverflow.com/q/53415353/
+// The ofType operator offered by redux-observable is not the best way to discriminate union types. 
+// A much better way is to use the isOfType function provided by typesafe-actions. https://stackoverflow.com/q/53415353/
 
 // RootAction are the actions that is input and output of the epics.
 
