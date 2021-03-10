@@ -64,8 +64,8 @@ export const searchBeersEpic: Epic<
   return action$.pipe(
     // this action fires every keystroke
     filter(isOfType(ActionTypes.SEARCH)), 
-    // the problem is, switchMap will be executed then cancel current stream 
-    // and will proceed to subscribe next action and creating new request. 
+    // the problem is, switchMap switches to a new observable on emissions from
+    // source, cancelling any previously active inner observables
     // The way to solve this is to use debounceTime
     // Wait X time, give the last value, reset time.
     debounceTime(500),
